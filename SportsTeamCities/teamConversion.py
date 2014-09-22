@@ -40,7 +40,7 @@ def printTeams(city):
             for team in teamDict[city][league]:
                 print team
 
-
+#Retrieves the league the team is associated with
 def getLeague(city, team):
     city = city.lower()
     for league in teamDict[city] :
@@ -54,19 +54,30 @@ def getLeague(city, team):
 #opens up the website to a particular team
 #using webbrowser.open
 #HANDLE THE LA ISSUE
-    #Clippers abbrev is lac, lakers lal, dodgers lad, angels laa
+    #FIX Yankees, Mets, White Sox, Cubs, Angels, 
 def openWebsite(city, team, abbrev):
     team = team.lower()
     #handling the la issue
     if team == "clippers" :
-        abbrev = "lac"
+        abbrev += "c"
     elif team == "lakers":
-        abbrev = "lal"
+        abbrev += "l"
     elif team == "giants":
-        abbrev = "nyg"
+        abbrev += "g"
     elif team == "jets":
-        abbrev = "nyj"
-    
+        abbrev += "j"
+    elif team == "yankees":
+        abbrev += "y"
+    elif team == "mets":
+        abbrev += "m"
+    elif team == "white sox":
+        abbrev = "chw"
+    elif team == "cubs":
+        abbrev = "chc"
+    elif team == "angels":
+        abbrev += "a"
+    elif team == "dodgers":
+        abbrev += "d"
     
    
     league = (getLeague(city, team)).lower()

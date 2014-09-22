@@ -5,11 +5,7 @@ Project that gives you the names of teams in a city
 Also offers to open the team's website if so desired
 '''
 
-#Prompt user for which nba team they would like to 
-
-from teamConversion import *
-
-#new = 2
+from teamConversion import validCity, printTeams, validTeam, openWebsite, cityAbbrev
 
 teamsDict = []
 
